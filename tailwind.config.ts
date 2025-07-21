@@ -18,7 +18,17 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'cormorant': ['Cormorant', 'serif'],
+				'opensans': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
+				moonstone: {
+					light: '#F5F1EB',
+					DEFAULT: '#E3E0D6', 
+					silver: '#C0B5A7',
+					dark: '#A8A8A8'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +94,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'moonlight': {
+					'0%, 100%': { opacity: '0.7', transform: 'scale(1)' },
+					'50%': { opacity: '1', transform: 'scale(1.02)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'moonlight': 'moonlight 3s ease-in-out infinite',
+				'shimmer': 'shimmer 2s linear infinite'
 			}
 		}
 	},
